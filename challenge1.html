@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <head>
+    <title>JavaScript Challenge #1</title>
+    <style>
+      #emailField {
+        display: none;
+      }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js">
+    </script>
+  </head>
+
+  <body>
+    <h1>Challenge One</h1>
+    <form action="challenge2.html">
+      <fieldset>
+        <legend>Email subscriptions</legend>
+        <div id="check">
+          <label>
+            <input type="checkbox" name="subscribe" id="subscribe">
+            Check to toggle the email field.
+          </label>
+        </div>
+
+        <div id="emailField">
+          <label>
+            Email Address:
+            <input type="text" name="email" id="email">
+          </label>
+        </div>
+
+        <input type="submit" value="Go To Challenge 2">
+      </fieldset>
+    </form>
+    <script>
+      $(document).ready(function () {
+        $("#subscribe").click(function () {
+          $("#emailField").toggle(this.checked)
+          console.log('email field working')
+        })
+      });
+
+
+    </script>
+
+  </body>
+
+</html>
